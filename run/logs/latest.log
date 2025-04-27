@@ -1,0 +1,212 @@
+[17:20:50] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.13
+[17:20:50] [main/INFO] (FabricLoader) Loading 59 mods:
+	- blockabulary 0.1.0
+	- fabric-api 0.92.5+1.20.1
+	- fabric-api-base 0.4.32+1802ada577
+	- fabric-api-lookup-api-v1 1.6.37+1802ada577
+	- fabric-biome-api-v1 13.0.14+1802ada577
+	- fabric-block-api-v1 1.0.12+1802ada577
+	- fabric-block-view-api-v2 1.0.3+924f046a77
+	- fabric-blockrenderlayer-v1 1.1.42+1802ada577
+	- fabric-client-tags-api-v1 1.1.3+1802ada577
+	- fabric-command-api-v1 1.2.35+f71b366f77
+	- fabric-command-api-v2 2.2.14+1802ada577
+	- fabric-commands-v0 0.2.52+df3654b377
+	- fabric-containers-v0 0.1.66+df3654b377
+	- fabric-content-registries-v0 4.0.13+1802ada577
+	- fabric-convention-tags-v1 1.5.6+1802ada577
+	- fabric-crash-report-info-v1 0.2.20+1802ada577
+	- fabric-data-attachment-api-v1 1.0.2+de0fd6d177
+	- fabric-data-generation-api-v1 12.3.6+1802ada577
+	- fabric-dimensions-v1 2.1.55+1802ada577
+	- fabric-entity-events-v1 1.6.1+1c78457f77
+	- fabric-events-interaction-v0 0.6.4+13a40c6677
+	- fabric-events-lifecycle-v0 0.2.64+df3654b377
+	- fabric-game-rule-api-v1 1.0.41+1802ada577
+	- fabric-gametest-api-v1 1.2.15+1802ada577
+	- fabric-item-api-v1 2.1.29+1802ada577
+	- fabric-item-group-api-v1 4.0.14+1802ada577
+	- fabric-key-binding-api-v1 1.0.38+1802ada577
+	- fabric-keybindings-v0 0.2.36+df3654b377
+	- fabric-lifecycle-events-v1 2.2.23+1802ada577
+	- fabric-loot-api-v2 1.2.3+1802ada577
+	- fabric-loot-tables-v1 1.1.47+9e7660c677
+	- fabric-message-api-v1 5.1.10+1802ada577
+	- fabric-mining-level-api-v1 2.1.52+1802ada577
+	- fabric-model-loading-api-v1 1.0.4+1802ada577
+	- fabric-models-v0 0.4.3+9386d8a777
+	- fabric-networking-api-v1 1.3.13+13a40c6677
+	- fabric-networking-v0 0.3.53+df3654b377
+	- fabric-object-builder-api-v1 11.1.5+e35120df77
+	- fabric-particles-v1 1.1.3+1802ada577
+	- fabric-recipe-api-v1 1.0.23+1802ada577
+	- fabric-registry-sync-v0 2.3.5+1802ada577
+	- fabric-renderer-api-v1 3.2.2+1802ada577
+	- fabric-renderer-indigo 1.5.3+85287f9f77
+	- fabric-renderer-registries-v1 3.2.47+df3654b377
+	- fabric-rendering-data-attachment-v1 0.3.39+92a0d36777
+	- fabric-rendering-fluids-v1 3.0.29+1802ada577
+	- fabric-rendering-v0 1.1.50+df3654b377
+	- fabric-rendering-v1 3.0.9+1802ada577
+	- fabric-resource-conditions-api-v1 2.3.9+1802ada577
+	- fabric-resource-loader-v0 0.11.12+fb82e9d777
+	- fabric-screen-api-v1 2.0.9+1802ada577
+	- fabric-screen-handler-api-v1 1.3.32+1802ada577
+	- fabric-sound-api-v1 1.0.14+1802ada577
+	- fabric-transfer-api-v1 3.3.6+8dd72ea377
+	- fabric-transitive-access-wideners-v1 4.3.2+1802ada577
+	- fabricloader 0.16.13
+	- java 21
+	- minecraft 1.20.1
+	- mixinextras 0.4.1
+[17:20:50] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/Users/jakob/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[17:20:50] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[17:20:50] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[17:20:50] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[17:20:51] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[17:20:55] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 94 milliseconds
+[17:20:56] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[17:20:57] [Render thread/ERROR] (Minecraft) Failed to verify authentication
+com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
+	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.<init>(YggdrasilUserApiService.java:55) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.createUserApiService(YggdrasilAuthenticationService.java:124) ~[authlib-4.0.43.jar:?]
+	at net.minecraft.client.MinecraftClient.createUserApiService(MinecraftClient.java:733) ~[minecraft-clientOnly-7787b014d4-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2.jar:?]
+	at net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:442) ~[minecraft-clientOnly-7787b014d4-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:211) ~[minecraft-clientOnly-7787b014d4-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) ~[fabric-loader-0.16.13.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) ~[fabric-loader-0.16.13.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.16.13.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar:?]
+Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 401
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:85) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-4.0.43.jar:?]
+	... 9 more
+[17:20:57] [Render thread/INFO] (Minecraft) Setting user: Player334
+[17:20:57] [Render thread/INFO] (blockabulary) Initializing blockabulary
+[17:20:57] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: java.io.FileNotFoundException: /Users/jakob/Downloads/blockabulary-1.20.1/run/config/vocab.json (No such file or directory)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.io.FileInputStream.open0(Native Method)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at java.base/java.io.FileReader.<init>(FileReader.java:75)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//com.schinkennugget.BlockabularyFileManager.loadConfig(BlockabularyFileManager.java:67)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//com.schinkennugget.BlockabularyFileManager.init(BlockabularyFileManager.java:29)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//com.schinkennugget.BlockabularyClient.onInitializeClient(BlockabularyClient.java:12)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:399)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:53)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:458)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at knot//net.minecraft.client.main.Main.main(Main.java:211)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+[17:20:57] [Render thread/INFO] (Minecraft) [STDERR]: 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+[17:20:57] [Render thread/INFO] (blockabulary) vocab.json file was not found
+[17:20:57] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.2-snapshot
+[17:20:58] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
+[17:20:59] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric (fabric-api-base, fabric-api, fabric-events-lifecycle-v0, fabric-biome-api-v1, fabric-loot-tables-v1, fabric-renderer-indigo, fabric-transitive-access-wideners-v1, fabric-screen-api-v1, fabric-recipe-api-v1, blockabulary, fabric-renderer-api-v1, fabric-mining-level-api-v1, fabric-particles-v1, fabric-rendering-data-attachment-v1, fabric-data-generation-api-v1, fabric-sound-api-v1, fabric-rendering-v1, fabric-renderer-registries-v1, fabric-content-registries-v0, fabric-events-interaction-v0, fabric-blockrenderlayer-v1, fabric-convention-tags-v1, fabric-rendering-fluids-v1, fabric-resource-conditions-api-v1, fabric-entity-events-v1, fabric-command-api-v1, fabric-message-api-v1, fabric-game-rule-api-v1, fabric-loot-api-v2, fabric-containers-v0, fabric-item-group-api-v1, fabric-data-attachment-api-v1, fabric-rendering-v0, fabric-key-binding-api-v1, fabric-crash-report-info-v1, fabric-command-api-v2, fabric-resource-loader-v0, fabricloader, fabric-client-tags-api-v1, fabric-registry-sync-v0, fabric-commands-v0, fabric-model-loading-api-v1, fabric-block-view-api-v2, fabric-models-v0, fabric-api-lookup-api-v1, fabric-item-api-v1, fabric-block-api-v1, fabric-transfer-api-v1, fabric-dimensions-v1, fabric-networking-v0, fabric-gametest-api-v1, fabric-screen-handler-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-networking-api-v1, fabric-object-builder-api-v1)
+[17:20:59] [Worker-Main-6/INFO] (Minecraft) Found unifont_all_no_pua-15.0.06.hex, loading
+[17:21:00] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
+[17:21:01] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[17:21:01] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[17:21:01] [Render thread/INFO] (Minecraft) OpenAL initialized on device Externe Kopfhörer
+[17:21:01] [Render thread/INFO] (Minecraft) Sound engine started
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[17:21:01] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[17:21:01] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[17:22:19] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[17:22:19] [Render thread/INFO] (Minecraft) Loaded 1271 advancements
+[17:22:20] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 64 new biomes in 881.4 μs
+[17:22:20] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.20.1
+[17:22:20] [Server thread/INFO] (Minecraft) Generating keypair
+[17:22:20] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[17:22:22] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:22:22] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:22:22] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:22:22] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:22:22] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:22:22] [Render thread/INFO] (Minecraft) Preparing spawn area: 66%
+[17:22:23] [Render thread/INFO] (Minecraft) Time elapsed: 2703 ms
+[17:22:23] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
+[17:22:23] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[17:22:23] [Server thread/INFO] (Minecraft) Player334[local:E:9d2fb42b] logged in with entity id 17 at (-32.33988153167538, -60.0, -9.498336455123825)
+[17:22:23] [Server thread/INFO] (Minecraft) Player334 joined the game
+[17:22:24] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[17:22:42] [Render thread/INFO] (Minecraft) [System] [CHAT] message.blockabulary.no_txt_found
+[17:22:46] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[17:22:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17:22:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17:22:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17:23:33] [Render thread/INFO] (Minecraft) [System] [CHAT] Loaded question geographisch\nLoaded answer géographique\n\nLoaded question das Klima\nLoaded answer le climat\n\nLoaded question mild; sanft; weich\nLoaded answer doux/douce\n\nLoaded question ja sogar\nLoaded answer voire\n\nLoaded question auf etw. zurückgehen\nLoaded answer remonter à qc\n\nLoaded question v. Chr (vor Christus)\nLoaded answer av. J-C.\n\nLoaded question jm. etw.	widmen\nLoaded answer dédier qc à qn\n\nLoaded question ein Gott\nLoaded answer un dieu\n\nLoaded question eine Göttin\nLoaded answer une déesse\n\nLoaded question ein Hügel 🤯🤔\nLoaded answer une colline\n\nLoaded question etw. eröffnen\nLoaded answer inaugurer qc\n\nLoaded question reich\nLoaded answer riche\n\nLoaded question wohnen\nLoaded answer loger\n\nLoaded question wohnen (1. Pers. Plural, nous)\nLoaded answer nous logeons\n\nLoaded question nahe bei\nLoaded answer proche de\n\nLoaded question der Himmel\nLoaded answer le ciel\n\nLoaded question spazieren gehen\nLoaded answer se promener\n\nLoaded question eine Ecke\nLoaded answer un coin\n\nLoaded question besuchen; häufig besuchen\nLoaded answer fréquenter\n\nLoaded question ein Wasserfall\nLoaded answer une cascade\n\nLoaded question etw. malen; etw. bemalen\nLoaded answer peindre qc\n\nLoaded question in Sicht; im Blickfeld\nLoaded answer en vue\n\nLoaded question eine Ruine\nLoaded answer une ruine\n\nLoaded question eine Seite\nLoaded answer un côté\n\nLoaded question etw. verdienen\nLoaded answer mériter qc\n\nLoaded question es kaum erwarten können, etw. zu tun\nLoaded answer avoir hâte de faire qc\n\nLoaded question etw. reservieren\nLoaded answer réserver qc\n\nLoaded question jn. erschüttern; jn. durcheinanderbringen\nLoaded answer bouleverser qn\n\nLoaded question (zufällig) auf jn./etw. treffen/stoßen\nLoaded answer tomber sur qn/qc\n\nLoaded question ein LKW\nLoaded answer un camion\n\nLoaded question menschlich\nLoaded answer humain/humaine\n\nLoaded question außerdem; darüber hinaus\nLoaded answer par ailleurs\n\nLoaded question etw. fordern; Anspruch erheben auf etw.\nLoaded answer revendiquer qc\n\nLoaded question eine Tatsache; ein Ereignis; eine Tat\nLoaded answer un fait\n\nLoaded question jm. etw. anvertrauen\nLoaded answer confier qc à qn\n\nLoaded question etw. einordnen; etw. einstufen\nLoaded answer classer qc\n\nLoaded question ein Feiertag\nLoaded answer un jour férié\n\nLoaded question etw. feiern\nLoaded answer célébrer qc\n\nLoaded question eine Erstürmung\nLoaded answer une prise\n\nLoaded question eine Vereinigung\nLoaded answer une union\n\nLoaded question ein Umzug; eine Parade\nLoaded answer un défilé\n\nLoaded question ein Zuschauer\nLoaded answer un spectateur\n\nLoaded question eine Zuschauerin\nLoaded answer une spectatrice\n\nLoaded question jährlich\nLoaded answer annuel/annuelle\n\nLoaded question etw. überfliegen\nLoaded answer survoler qc\n\nLoaded question beliebt\nLoaded answer populaire\n\nLoaded question ein Gesetz\nLoaded answer un loi\n\nLoaded question eine Teilung\nLoaded answer une division\n\nLoaded question entfernt; fern; entlegen\nLoaded answer éloigné/éloignée\n\nLoaded question hoch\nLoaded answer élevé/élevée\n\nLoaded question die Miete\nLoaded answer le loyer\n\nLoaded question eine Villa\nLoaded answer une villa\n\nLoaded question eine Sozialwohnung\nLoaded answer un logement social\n\nLoaded question die Gewalt\nLoaded answer la violence\n\nLoaded question die Kriminalität; die Straffälligkeit\nLoaded answer la délinquance\n\nLoaded question herumliegen (Dinge); herumlungern (Personen)\nLoaded answer traîner\n\nLoaded question ausreichen, genügen\nLoaded answer suffire\n\nLoaded question ausreichen, genügen (suffire): 1. Pers. Sg.\nLoaded answer je suffis\n\nLoaded question ausreichen, genügen (suffire): 2. Pers. Sg.\nLoaded answer tu suffis\n\nLoaded question ausreichen, genügen (suffire): 3. Pers. Sg.\nLoaded answer il/elle suffit\n\nLoaded question ausreichen, genügen (suffire): 1. Pers. Pl.\nLoaded answer nous suffisons\n\nLoaded question ausreichen, genügen (suffire): 2. Pers. Pl.\nLoaded answer vous suffisez\n\nLoaded question ausreichen, genügen (suffire): 3. Pers. Pl.\nLoaded answer ils/elles suffisent\n\nLoaded question ausreichen, genügen (suffire): passé composé\nLoaded answer j'ai suffi\n\nLoaded question zu etw. beitragen\nLoaded answer contribuer à qc\n\nLoaded question gemäß jm./etw.; je nach jm./etw.\nLoaded answer selon qn/qc\n\nLoaded question der Schulbesuch; die Einschulung\nLoaded answer la scolarisation\n\nLoaded question ein Prozentsatz; eine Quote\nLoaded answer un taux\n\nLoaded question eine Minderheit\nLoaded answer une minorité\n\nLoaded question leicht\nLoaded answer léger/légère\n\nLoaded question ein Bezug; ein Verhältnis\nLoaded answer un rapport\n\nLoaded question im Verhältnis zu\nLoaded answer par rapport à\n\nLoaded question eine Meinung\nLoaded answer une opinion\n\nLoaded question literarisch\nLoaded answer littéraire\n\nLoaded question die Wichtigkeit; die Bedeutung\nLoaded answer l'importance\n\nLoaded question ein Leser\nLoaded answer un lecteur\n\nLoaded question eine Leserin\nLoaded answer une lectrice\n\nLoaded question die Schöpfung; die Erstellung\nLoaded answer la création\n\nLoaded question sich für etw. begeistern\nLoaded answer se passioner pour qc\n\nLoaded question etw. kommentieren\nLoaded answer commenter qc\n\nLoaded question ein Album\nLoaded answer un album\n\nLoaded question sich mit jm. austauschen\nLoaded answer échanger avec qc\n\nLoaded question selten\nLoaded answer rare\n\nLoaded question jn. daran zu hindern, etw. zu tun\nLoaded answer empêcher qn de faire qc\n\nLoaded question ein Konflikt\nLoaded answer un conflit\n\nLoaded question darauf achten, etw. zu tun\nLoaded answer prendre soin de faire qc\n\nLoaded question ein Opernhaus; eine Oper\nLoaded answer un opéra\n\nLoaded question ein Gespräch, eine Unterhaltung\nLoaded answer une converstion\n\nLoaded question etw. ankündigen\nLoaded answer annoncer qc\n\nLoaded question schwer, schwerfällig\nLoaded answer lourd/lourde\n\nLoaded question jn. unterstützen\nLoaded answer soutenir qn\n\nLoaded question eine Probe; eine Prüfung\nLoaded answer une épreuve\n\nLoaded question schrecklich\nLoaded answer terrible\n\nLoaded question tief; stark\nLoaded answer profond/profonde\n\nLoaded question die Verständlislosigkeit; das Unverständnis\nLoaded answer l'incompréhensation\n\nLoaded question ein Treuebruch, ein Verrat\nLoaded answer une trahison\n\nLoaded question das Vertrauen\nLoaded answer la confiance\n\nLoaded question jm. vertrauen\nLoaded answer faire confiance à qn\n\nLoaded question eine Seele\nLoaded answer une âme\n\nLoaded question poetisch; dichterisch\nLoaded answer poétique\n\nLoaded question die Philosophie\nLoaded answer la philosophie\n\nLoaded question vermutlich\nLoaded answer sans doute\n\nLoaded question ein Augenblick\nLoaded answer un instant\n\nLoaded question ein Anwalt\nLoaded answer un avocat\n\nLoaded question eine Anwältin\nLoaded answer une avocate\n\nLoaded question ein Unglück\nLoaded answer un malheur\n\nLoaded question etw. pressen; etw. drücken\nLoaded answer presser qc\n\nLoaded question ganz gleich was\nLoaded answer quoi que\n\nLoaded question etw. blockieren\nLoaded answer bloquer qc\n\nLoaded question es ist besser, etw. zu tun\nLoaded answer il vaut mieux faire qc\n\nLoaded question woanders; an einem anderen Ort\nLoaded answer ailleurs\n\nLoaded question schuldig\nLoaded answer coupable\n\nLoaded question so viel\nLoaded answer tant\n\nLoaded question realistisch\nLoaded answer réaliste\n\nLoaded question komisch\nLoaded answer comique\n\nLoaded question ein Bericht; eine Erzählung\nLoaded answer un récit\n\nLoaded question etw. hineinschütten; etw. eingießen\nLoaded answer verser qc\n\nLoaded question aus etw. bestehen; sich aus etw. zusammensetzen\nLoaded answer se composer de qc\n\nLoaded question verpflichtet sein, etw. zu tun; etw. tun müssen\nLoaded answer être obligé/obligée de faire qc\n\nLoaded question gleichgültig sein ggü. jm./etw.; sich über jm. lustig machen\nLoaded answer se moquer de qn/qc\n\nLoaded question ein Erzähler\nLoaded answer un narrateur\n\nLoaded question eine Erzählerin\nLoaded answer une narratrice\n\nLoaded question jm. etw. angeben; jm. etw. zeigen; jm. etw. nennen\nLoaded answer indiquer qc à qn\n\nLoaded question erscheinen; scheinen\nLoaded answer paraître\n\nLoaded question eine Hauptfigur\nLoaded answer un personnage principal\n\nLoaded question ein Werk\nLoaded answer une œuvre\n\nLoaded question fürchten\nLoaded answer craindre\n\nLoaded question sich über jn./etw. beschweren; sich über jn./etw. beklagen\nLoaded answer se plaindre de qn/qc\n\nLoaded question die Unkenntnis; die Unwissenheit\nLoaded answer l'ignorance\n\nLoaded question eine Generation\nLoaded answer une génération\n\nLoaded question ein Schöpfer\nLoaded answer un créateur\n\nLoaded question eine Schöpferin\nLoaded answer une créatrice\n\nLoaded question sich von jm./etw. inspirieren lassen\nLoaded answer s'inspirer de qn/qc\n\nLoaded question ein Stil\nLoaded answer un style\n\nLoaded question karikaturistisch\nLoaded answer caricatural/caricaturale\n\nLoaded question sich stürzen in\nLoaded answer se lancer dans\n\nLoaded question ein Kriminalroman; ein Krimi\nLoaded answer un polar\n\nLoaded question eine Biographie\nLoaded answer une biographie\n\nLoaded question heldenhaft\nLoaded answer héroïque\n\nLoaded question eine Handschrift; ein Zeichentrick\nLoaded answer un graphisme\n\nLoaded question aktuell\nLoaded answer actuel/actuelle\n\nLoaded question eine Auswahl\nLoaded answer une sélection\n\nLoaded question eine Jury\nLoaded answer une jury\n\nLoaded question sich weiterentwicklen\nLoaded answer évoluer\n\nLoaded question ein Zeichentrickfilm\nLoaded answer un dessin animé\n\nLoaded question digital\nLoaded answer numérique\n\nLoaded question etw. erkunden; etw. erforschen\nLoaded answer explorer qc\n\nLoaded question eine Austellung\nLoaded answer une exposition\n\nLoaded question ständig; dauernd\nLoaded answer permanent/permanente\n\nLoaded question perfekt; tadellos\nLoaded answer parfait/parfaite\n\nLoaded question dick; dicht\nLoaded answer épais/épaisse\n\nLoaded question ein Glanz; ein Glitzern\nLoaded answer un éclat\n\nLoaded question zart; fein; empfindlich\nLoaded answer délicat/délicate\n\nLoaded question überwältigend; erschütternd\nLoaded answer bouleversant/bouleversante\n\nLoaded question frisch\nLoaded answer frais/fraîche\n\nLoaded question ein Nebel\nLoaded answer un brouillard\n\nLoaded question ein Kind (männlich)\nLoaded answer un gosse\n\nLoaded question ein Kind (weiblich)\nLoaded answer une gosse\n\nLoaded question ein Baby; ein Säugling\nLoaded answer un bébé\n\nLoaded question etw. verursachen\nLoaded answer provoquer qc\n\nLoaded question das Erstaunen\nLoaded answer l'étonnement\n\nLoaded question die Freude\nLoaded answer la joie\n\nLoaded question ein Unbekannter\nLoaded answer un inconnu\n\nLoaded question eine Unbekannte\nLoaded answer une inconnue\n\nLoaded question die Liebe\nLoaded answer l'amour\n\nLoaded question sich einer Sache bewusst sein\nLoaded answer être conscient/consciente de qc\n\nLoaded question ausreichend\nLoaded answer suffisant/suffisante\n\nLoaded question einzig; einzeln; einzigartig\nLoaded answer unique\n\nLoaded question ein Stipendium\nLoaded answer une bourse\n\nLoaded question abhauen; weggehen\nLoaded answer se casser\n\nLoaded question das Mitleid; das Erbarmen\nLoaded answer la pitié\n\nLoaded question mit jm. Mitleid haben\nLoaded answer avoir pitié de qn\n\nLoaded question eine Blase; eine Sprechblase\nLoaded answer une bulle\n\nLoaded question eine Comicseite\nLoaded answer une planche de BD\n\nLoaded question eine Vignette\nLoaded answer une vignette\n\nLoaded question ein Rahmen\nLoaded answer un cadre\n\nLoaded question lebhaft\nLoaded answer vif/vive\n\nLoaded question ein Plan; eine Ebene; eine Kameraeinstellung\nLoaded answer un plan\n\nLoaded question die Halbtotale\nLoaded answer le plan moyen\n\nLoaded question die Halbnahaufnahme\nLoaded answer le plan rapproché\n\nLoaded question die Großaufnahme\nLoaded answer le gros plan\n\nLoaded question die Perspektive von unten/Froschperspektive\nLoaded answer la contre-plongée\n\nLoaded and saved 182 questions and answers
+[17:23:43] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[17:23:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17:23:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17:23:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17:24:04] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r das Mitleid; das Erbarmen
+[17:24:24] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r das Mitleid; das Erbarmen
+[17:24:44] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r das Mitleid; das Erbarmen
+[17:25:04] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r das Mitleid; das Erbarmen
+[17:25:24] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r das Mitleid; das Erbarmen
+[17:25:44] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r das Mitleid; das Erbarmen
+[17:26:04] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r das Mitleid; das Erbarmen
+[17:26:06] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[17:26:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17:26:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17:26:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17:26:24] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r das Mitleid; das Erbarmen
+[17:26:44] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r das Mitleid; das Erbarmen
+[17:26:59] [Render thread/INFO] (Minecraft) [System] [CHAT] 'la pitié' message.blockabulary.right_answer
+[17:26:59] [Render thread/INFO] (blockabulary) Updated rightAnswers to 1
+[17:26:59] [Render thread/INFO] (blockabulary) Updated totalQuestions to 1
+[17:27:12] [Server thread/INFO] (Minecraft) [Not Secure] <Player334> "sfava"
+[17:27:12] [Render thread/INFO] (Minecraft) [CHAT] <Player334> "sfava"
+[17:27:43] [Render thread/INFO] (Minecraft) [System] [CHAT] '§4oe§r' message.blockabulary.wrong_answer '§ala pitié§r'
+[17:27:43] [Render thread/INFO] (blockabulary) Updated totalQuestions to 2
+[17:27:43] [Render thread/INFO] (blockabulary) Updated wrongAnswers to 1
+[17:27:56] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[17:27:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17:27:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17:27:56] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17:28:14] [Render thread/INFO] (Minecraft) [System] [CHAT] 'la pitié' message.blockabulary.right_answer
+[17:28:14] [Render thread/INFO] (blockabulary) Updated rightAnswers to 2
+[17:28:14] [Render thread/INFO] (blockabulary) Updated totalQuestions to 3
+[17:28:19] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[17:28:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17:28:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17:28:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17:31:14] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r ein Umzug; eine Parade
+[17:31:25] [Render thread/INFO] (Minecraft) [System] [CHAT] Unknown or incomplete command, see below for error
+[17:31:25] [Render thread/INFO] (Minecraft) [System] [CHAT] voc cycle_time<--[HERE]
+[17:31:34] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r ein Umzug; eine Parade
+[17:31:54] [Render thread/INFO] (Minecraft) [System] [CHAT] §b[Blockabulary]§r ein Umzug; eine Parade
+[17:32:08] [Render thread/INFO] (Minecraft) [System] [CHAT] message.blockabulary.cycle_time_changed_to 100s
+[17:32:11] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[17:32:11] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17:32:11] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17:32:11] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17:32:13] [Server thread/INFO] (Minecraft) Player334 lost connection: Disconnected
+[17:32:13] [Server thread/INFO] (Minecraft) Player334 left the game
+[17:32:13] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[17:32:13] [Server thread/INFO] (Minecraft) Stopping server
+[17:32:13] [Server thread/INFO] (Minecraft) Saving players
+[17:32:13] [Server thread/INFO] (Minecraft) Saving worlds
+[17:32:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17:32:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17:32:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17:32:13] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (New World): All chunks are saved
+[17:32:13] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17:32:13] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[17:32:13] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+[17:32:14] [Render thread/INFO] (Minecraft) Stopping!

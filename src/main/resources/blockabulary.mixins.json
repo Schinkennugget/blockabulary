@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.schinkennugget.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

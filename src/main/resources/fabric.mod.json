@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "blockabulary",
+	"version": "${version}",
+	"name": "Blockabulary",
+	"description": "Learn your vocab in-game!",
+	"authors": [
+		"Schinkennugget"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/vocab_trainer/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.schinkennugget.Blockabulary"
+		],
+		"client": [
+			"com.schinkennugget.BlockabularyClient"
+		],
+		"fabric-datagen": [
+			"com.schinkennugget.BlockabularyDataGenerator"
+		]
+	},
+	"mixins": [
+		"blockabulary.mixins.json",
+		{
+			"config": "blockabulary.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-command-api-v2": "*"
+	},
+	"suggests": {
+
+	}
+}
