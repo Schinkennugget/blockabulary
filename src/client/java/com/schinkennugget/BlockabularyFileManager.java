@@ -18,15 +18,17 @@ public class BlockabularyFileManager {
     private static final File TXT_FILE = CONFIG_DIR.resolve("vocab.txt").toFile();
 
 
-    private static List<Map<String, String>> data;
+    public static List<Map<String, String>> dataFromJson;
+    public static List<Map<String, String>> orderedData;
     public static String currentQuestion = null;
     public static String currentAnswer = null;
+    //public static boolean noDataLoaded = dataFromJson == null || dataFromJson.isEmpty();
 
     public static void init() {
         //if (!VOCAB_FILE.exists()) {
         //    createDefaultConfig();
         //}
-        loadConfig();
+        loadVocab();
     }
 
     private static void createDefaultConfig() {
@@ -62,14 +64,15 @@ public class BlockabularyFileManager {
         }
     }
 
-    private static void loadConfig() {
+    public static void loadVocab() {
+        System.out.println("executing loadVocab");
         try {
             FileReader reader = new FileReader(VOCAB_FILE);
             Type type = new TypeToken<Map<String, List<Map<String, String>>>>() {}.getType();
             Map<String, List<Map<String, String>>> data = GSON.fromJson(reader, type);
             reader.close();
             
-            BlockabularyFileManager.data = data.get("data");
+            dataFromJson = data.get("data");
         } catch (IOException e) {
             e.printStackTrace();
             Blockabulary.LOGGER.info("vocab.json file was not found");
@@ -116,7 +119,8 @@ public class BlockabularyFileManager {
                         e.printStackTrace();
                         return "Failed to write the json file, because it wasn't found";
                     }
-                    return info + "Loaded and saved " + String.valueOf(numberOfDataLoaded) + " questions and answers";
+                    dataFromJson = dataForJson;
+                    return info + "Loaded and saved " + numberOfDataLoaded + " questions and answers";
 
                 } catch (IOException e) {
                     Blockabulary.LOGGER.info("vocab.txt file could not be loaded, because it wasn't found.");
@@ -134,25 +138,89 @@ public class BlockabularyFileManager {
 
     }
 
+    private static Map<String, String> selected;
 
-    public static String getRandomQuestion() {
-        loadConfig();
+    public static List<Map<String, String>> getOrderedData() {
+        if (orderedData == null) {
+            loadVocab();
+            System.out.println("ececuting getOrderedData() (oben)");
+            orderedData = new ArrayList<>(dataFromJson);
+            Collections.shuffle(orderedData);
+        }
+        System.out.println("ececuting getOrderedData()");
+        System.out.println(orderedData);
+        return orderedData;
+    }
 
-        if (data == null || data.isEmpty()) {
+    public static String getQuestion() {
+        System.out.println("executing getQuestion()");
+        loadVocab();
+
+        if (dataFromJson == null || dataFromJson.isEmpty()) {
             return "vocab.json is empty or does not exist";
         }
 
-        Random random = new Random();
 
+        //Random random = new Random();
+        //Map<String, String> selected = dataFromJson.get(random.nextInt(dataFromJson.size()));
+        selected = getOrderedData().get(0);
 
-
-        Map<String, String> selected = data.get(random.nextInt(data.size()));
+        if (orderedData == null || orderedData.isEmpty()) {
+            return "An error occured. The vocab could not be loaded. (Error 43)";
+        }
+        for (int i = 0; i < orderedData.size(); i++) {
+            if (orderedData.get(i) == null) {
+                return ("An error occurred. The vocab could not be loaded correctly. (Error 42." + i + ")");
+            }
+        }
 
         currentQuestion = selected.get("question");
         currentAnswer = selected.get("answer");
 
-        selected.clear();
+        System.out.println("ende: "+orderedData);
 
         return currentQuestion;
+    }
+
+    public static void reorderData(int newOrder) { //negative: remove, every other digit: where the number gets moved to
+        if (newOrder < 0) {
+            orderedData.remove(0);
+            if (orderedData == null || orderedData.isEmpty()) {
+                BlockabularyChatMessages.sendLocalMessage(I18n.translate("message.blockabulary.finished_stack"));
+            }
+        } else if (newOrder <= orderedData.size()) {
+            orderedData.remove(0);
+            orderedData.add(newOrder, selected);
+        } else {
+            orderedData.remove(0);
+            orderedData.add(orderedData.size(), selected);
+        }
+    }
+
+    public static void writeQuestionStats (boolean right) {
+        loadVocab();
+        if (dataFromJson.contains(selected)) {
+
+            List<Map<String, String>> dataForJson = new ArrayList<>(dataFromJson);
+            dataForJson.remove(selected);
+
+            selected.replace("timesAsked", String.valueOf(Integer.valueOf(selected.get("timesAsked") + 1)));
+            if (right) {
+                selected.replace("timesAnsweredCorrectly", String.valueOf(Integer.valueOf(selected.get("timesAnsweredCorrectly") + 1)));
+            }
+
+            dataForJson.add(selected);
+
+            Map<String, List<Map<String, String>>> finalData = new HashMap<>();
+            finalData.put("data", dataForJson);
+
+            try (FileWriter writer = new FileWriter(VOCAB_FILE)){
+                GSON.toJson(finalData, writer);
+                writer.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.err.println("Failed to write the json file, because it wasn't found");
+            }
+        }
     }
 }

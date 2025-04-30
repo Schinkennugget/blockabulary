@@ -29,5 +29,7 @@
   "message.blockabulary.stats_skipped_questions_after": "§r",
   "message.blockabulary.no_txt_found": "No vocab.txt file found. Is it called vocab.txt? Did you put it into the config folder?",
   "message.blockabulary.cant_overwrite_vocab": "There already exists a vocab.json file inside the config folder. Please move it to another directory, delete, or rename it",
+  "message.blockabulary.no_data_loaded": "vocab.json is empty or does not exist. You can disable this warning with /voc disable.",
+  "message.blockabulary.finished_stack": "§aCongratulations! You finished all of your vocab.§r The questions will start again from the beginning.",
   "message.blockabulary.stats_end": "§r"
 }

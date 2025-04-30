@@ -13,7 +13,7 @@ import static com.schinkennugget.BlockabularyChatMessages.sendLocalMessage;
 
 public class BlockabularyCommands {
 
-    public static int ignoreCapitalization = 0; //0=no, 1=only half a point, 2=yes
+    public static int ignoreCapitalization = 1; //0=no, 1=only half a point, 2=yes
 
     public static void registerCommands() {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
@@ -49,30 +49,49 @@ public class BlockabularyCommands {
                     .executes(context -> {
                             String answer = StringArgumentType.getString(context, "answer");
 
+                            //no question asked
                             if(BlockabularyFileManager.currentQuestion == null || BlockabularyFileManager.currentAnswer == null || !BlockabularyQuestionScheduler.isWaitingForAnswer) {
                                 sendLocalMessage(I18n.translate("message.blockabulary.no_question_asked"));
+
+                            //right answer
                             } else if (answer.equals(BlockabularyFileManager.currentAnswer)) {
                                 sendLocalMessage("'" + answer + "' " + I18n.translate("message.blockabulary.right_answer"));
                                 BlockabularyStats.setStats("rightAnswers", BlockabularyStats.getRightAnswers()+1);
                                 BlockabularyStats.setStats("totalQuestions", BlockabularyStats.getTotalQuestions()+1);
+                                BlockabularyFileManager.reorderData(-1);
+                                BlockabularyFileManager.writeQuestionStats(true);
+
+                            //right answer, but with wrong capitalization
                             } else if(answer.equalsIgnoreCase(BlockabularyFileManager.currentAnswer)){
                                 sendLocalMessage("'§6" + answer + "§r'" + " "+I18n.translate("message.blockabulary.wrong_capitalization") + " '§a" + BlockabularyFileManager.currentAnswer + "§r'");
                                 BlockabularyStats.setStats("totalQuestions", BlockabularyStats.getTotalQuestions()+1);
+
                                 if(ignoreCapitalization == 0){
                                     BlockabularyStats.setStats("wrongCapitalization0", BlockabularyStats.getWrongCapitalization0()+1);
                                     context.getSource().sendFeedback(Text.translatable("message.blockabulary.wrong_capitalization_0_info"));
+                                    BlockabularyFileManager.reorderData(6);
+                                    BlockabularyFileManager.writeQuestionStats(false);
+
                                 } else if(ignoreCapitalization == 1){
                                     BlockabularyStats.setStats("wrongCapitalization1", BlockabularyStats.getWrongCapitalization1()+1);
                                     context.getSource().sendFeedback(Text.translatable("message.blockabulary.wrong_capitalization_1_info"));
+                                    BlockabularyFileManager.reorderData(12);
+                                    BlockabularyFileManager.writeQuestionStats(true);
+
                                 } else if(ignoreCapitalization == 2){
                                     BlockabularyStats.setStats("wrongCapitalization2", BlockabularyStats.getWrongCapitalization2()+1);
                                     context.getSource().sendFeedback(Text.translatable("message.blockabulary.wrong_capitalization_2_info"));
+                                    BlockabularyFileManager.reorderData(-1);
+                                    BlockabularyFileManager.writeQuestionStats(true);
                                 }
 
+                            //wrong answer
                             } else {
                                 sendLocalMessage("'§4" + answer + "§r'" + " "+ I18n.translate("message.blockabulary.wrong_answer") + " '§a" + BlockabularyFileManager.currentAnswer + "§r'");
                                 BlockabularyStats.setStats("totalQuestions", BlockabularyStats.getTotalQuestions()+1);
                                 BlockabularyStats.setStats("wrongAnswers", BlockabularyStats.getWrongAnswers()+1);
+                                BlockabularyFileManager.reorderData(6);
+                                BlockabularyFileManager.writeQuestionStats(false);
                             }
 
                             BlockabularyQuestionScheduler.setTickCounter(0);
@@ -102,6 +121,8 @@ public class BlockabularyCommands {
                                     BlockabularyQuestionScheduler.setTickCounter(0);
                                     BlockabularyStats.setStats("totalQuestions", BlockabularyStats.getTotalQuestions()+1);
                                     BlockabularyStats.setStats("skippedQuestions", BlockabularyStats.getSkippedQuestions()+1);
+                            BlockabularyFileManager.writeQuestionStats(false);
+                            BlockabularyFileManager.reorderData(6);
                                     return Command.SINGLE_SUCCESS;
                                 }
                         )
