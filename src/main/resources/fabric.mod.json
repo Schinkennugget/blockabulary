@@ -8,11 +8,11 @@
 		"Schinkennugget"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/blockabulary",
+		"sources": "https://github.com/Schinkennugget/blockabulary"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/vocab_trainer/icon.png",
+	"icon": "blockabulary/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
